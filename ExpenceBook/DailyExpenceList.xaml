@@ -11,6 +11,7 @@
             <TextBox Canvas.Left="232" Canvas.Top="39" Height="23" Name="txtRecordId" Width="120"  />
             <Button Name="removeButton" Canvas.Left="386" Canvas.Top="39" Height="21" Width="69" Click="removeButton_Click">Remove</Button>
         </Canvas>
+        
         <ListView Margin="44,110,40,10" Name="lvDailyExpence" ItemsSource="{Binding}">
             <ListView.View>
                 <GridView>

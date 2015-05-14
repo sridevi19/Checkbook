@@ -37,5 +37,34 @@ namespace ExpenceBook
 
             AccountTypeExpence.DataContext = AccountTypeDailyExpence;
         }
+        private void Window_ContentRendered(object sender, EventArgs e)
+        {
+            SolidColorBrush MyBrush = Brushes.Aquamarine;
+
+            // Set the value
+            Application.Current.Resources["DynamicBG"] = MyBrush;
+        }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            SolidColorBrush MyBrush = Brushes.CadetBlue;
+
+            // Set the value
+            Application.Current.Resources["DynamicBG"] = MyBrush;
+
+        }
+        public partial class MainWindow : Window
+        {
+            public MainWindow()
+            {
+                ExpenceBook.InitializeComponent();
+            }
+
+            private void Window_Loaded(object sender, RoutedEventArgs e)
+            {
+                this.Resources["DynamicBG"] = new SolidColorBrush(Colors.Red);
+            }
+
+        }
     }
 }

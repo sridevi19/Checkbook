@@ -236,6 +236,24 @@ namespace MicroMVVM.Expence.Daily
             //}
 
             return lstdailyExpence;
+            private void Window_ContentRendered(object sender, EventArgs e)
+{
+    SolidColorBrush MyBrush = Brushes.Aquamarine;
+
+    // Set the value
+    DailyExpence.Resource["DynamicBG"] = MyBrush;         
+}
+
+private void Button_Click(object sender, RoutedEventArgs e)
+{
+    SolidColorBrush MyBrush = Brushes.Red;
+
+    // Set the value
+    DailyExpence.Resource["DynamicBG"] = MyBrush;
+}
+
         }
+  
     }
+
 }
